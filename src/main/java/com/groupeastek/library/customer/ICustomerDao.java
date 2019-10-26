@@ -8,9 +8,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ICustomerDao extends JpaRepository<Customer, Integer>{
 	
-	public Customer findByLastName(String lastName);
+	public List<Customer> findByLastName(String lastName);
 	
-	public Customer findByFirstName(String firstName);
+	public List<Customer> findByFirstName(String firstName);
 	
 	public Customer findByEmail(String email);
 	

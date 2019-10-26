@@ -20,5 +20,5 @@ public interface ILoanDao extends JpaRepository<Loan, Integer>{
 	@Query("SELECT lo FROM Loan lo INNER JOIN lo.pk.book b "
 			+ "INNER JOIN lo.pk.customer c "
 			+ "WHERE b.id = ?1 AND c.id = ?2 AND lo.status = ?3")
-	public List<Loan> getLoanByCriteria (int bookId, int customerId, LoanStatus status);
+	public Loan getLoanByCriteria (int bookId, int customerId, LoanStatus status);
 }
